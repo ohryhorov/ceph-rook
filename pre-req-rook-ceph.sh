@@ -7,7 +7,6 @@
 #kubectl label nodes cmp3 role=ceph-mon-node
 
 #kubectl get secret rook-ceph-admin-keyring -n rook-ceph --export -o yaml | sed -e 's/keyring:/key:/' | kubectl apply -n openstack -f-
-#kubectl get secret rook-ceph-admin-keyring -n rook-ceph --export -o yaml | kubectl apply -n openstack -f-
 
 #kubectl cp rook-ceph/$(kubectl -n rook-ceph get pod -l "app=rook-ceph-operator" -o jsonpath='{.items[0].metadata.name}'):/etc/ceph/ceph.conf /tmp/ && sed -i 's/[a-z]1\+://g' /tmp/ceph.conf
 # REMOVE client.admin section

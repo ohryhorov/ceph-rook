@@ -6,7 +6,7 @@ conf:
       enable_v1_api: True
       enable_v2_registry: True
     glance_store:
-      rbd_store_crush_rule: replicapool
+      rbd_store_crush_rule: replicated_ruleset
 
 volume:
   class_name: rook-ceph-block
