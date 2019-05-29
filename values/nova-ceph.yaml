@@ -14,4 +14,5 @@ conf:
   nova:
     libvirt:
       cpu_mode: custom
-      virt_type: qemu
+      virt_type: kvm
+      cpu_model: kvm64
